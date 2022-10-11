@@ -6,19 +6,25 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './core/auth/auth.module';
 import { ProtectedModule } from './core/protected/protected.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-	declarations: [
-		AppComponent
-	],
+	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
+		HttpClientModule,
+		MatNativeDateModule,
+		MaterialModule,
 		SharedModule,
 		AuthModule,
-		ProtectedModule
+		ProtectedModule,
+		BrowserAnimationsModule,
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

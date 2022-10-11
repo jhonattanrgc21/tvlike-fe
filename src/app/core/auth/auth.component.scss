@@ -17,12 +17,20 @@
 	justify-content: center;
 	align-items: center;
 	padding: 15px;
-
 }
 
 .wrap-login100 {
 	width: 500px;
-	background: rgba(0, 0, 0, .75);
+	background: rgba(0, 0, 0, 0.75);
 	border-radius: 10px;
 	overflow: hidden;
+}
+
+// Background
+.bg-container {
+	background-image: url("../../../assets/images/bg-login.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
 }

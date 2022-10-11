@@ -6,19 +6,23 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-
-
+import { MaterialModule } from 'src/app/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
 	declarations: [
 		AuthComponent,
 		LoginComponent,
 		RegisterComponent,
-  ForgotPasswordComponent
+		ForgotPasswordComponent,
+		ChangePasswordComponent,
 	],
 	imports: [
 		CommonModule,
-		AuthRoutingModule
-	]
+		AuthRoutingModule,
+		MaterialModule,
+		ReactiveFormsModule,
+	],
 })
-export class AuthModule { }
+export class AuthModule {}

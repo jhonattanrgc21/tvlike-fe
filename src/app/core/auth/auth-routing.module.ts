@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -12,26 +13,30 @@ const routes: Routes = [
 		children: [
 			{
 				path: 'login',
-				component: LoginComponent
+				component: LoginComponent,
 			},
 			{
 				path: 'register',
-				component: RegisterComponent
+				component: RegisterComponent,
 			},
 			{
 				path: 'forgot-password',
-				component: ForgotPasswordComponent
+				component: ForgotPasswordComponent,
+			},
+			{
+				path: 'change-password/:token',
+				component: ChangePasswordComponent,
 			},
 			{
 				path: '**',
-				redirectTo: ''
-			}
-		]
-	}
+				redirectTo: 'login',
+			},
+		],
+	},
 ];
 
 @NgModule({
 	imports: [RouterModule.forChild(routes)],
-	exports: [RouterModule]
+	exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}
